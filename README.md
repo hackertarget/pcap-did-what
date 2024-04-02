@@ -1,6 +1,6 @@
 # Zeek & Grafana Integration for Network Monitoring
 
-This repository provides a quick way to get started using Zeek in with a practical use case. The focus is to analyse a network pcap and enable easy visual analysis using Grafana Charts.                                                                                                                                                                         
+This repository provides a quick way to get started using Zeek with a practical use case. The focus is to analyse a network pcap and enable easy visual analysis using Grafana Charts.                                                                                                                                                                         
 The mini project consists of three parts.
 
 1. Custom Zeek Docker build that generates zeek log files with GeoIP, ASN and JA3 / JA4 fingerprints.
@@ -49,20 +49,26 @@ Follow these steps to deploy the environment:
 
 From the ./pcap-did-what/ build zeek image.
 
-```cd zeek-docker
-sudo docker build -t zeek-custom .```
+```
+cd zeek-docker
+sudo docker build -t zeek-custom .
+```
 
 Running the docker will drop you into bash. From bash it is possible to generate the zeek logs and convert them to sqlite db.
 
-```# zeek -C -r /data/test.pcap local
-   # zeek-to-sqlite.py```
+```
+# zeek -C -r /data/test.pcap local
+# zeek-to-sqlite.py
+```
 
 3. **Start the Grafana Container**
     
 Use docker-compose to start the Grafana container:
 
-```cd ../grafana-docker
-sudo docker-compose up -d```
+```
+cd ../grafana-docker
+sudo docker-compose up -d
+```
 
 
 4. **Accessing Grafana:**
