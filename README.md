@@ -1,16 +1,15 @@
 # Zeek & Grafana Integration for Network Monitoring
-                                                                                                                      This repository provides a quick way to get started using Zeek in with a practical use case. The focus is to analyse a
- network pcap and enable easy visual analysis using Grafana Charts.                                                                                                                                                                         
-The mini project consists of three parts.                                                                             
-                                                                                                                      
-1. Custom Zeek Docker build that generates zeek log files with GeoIP, ASN and JA3 / JA4 fingerprints.                 
-                                                                                                                      
+
+This repository provides a quick way to get started using Zeek in with a practical use case. The focus is to analyse a network pcap and enable easy visual analysis using Grafana Charts.                                                                                                                                                                         
+The mini project consists of three parts.
+
+1. Custom Zeek Docker build that generates zeek log files with GeoIP, ASN and JA3 / JA4 fingerprints.
+                 
 2. Python Script to convert zeek log files to an SQLite database.
                                                                                                                       
-3. Custom Grafana Docker build with a pre-configured dashboard for analysing Zeek Data.                               
-                                                                                                                      
-Keeping this project simple and broken up into three parts should help both Zeek newcomers and those with more experience get up and running quickly. Working from these base images it would be an easy task to add other packages, and ext
-end the dashboard to suit your own environment or use case. 
+3. Custom Grafana Docker build with a pre-configured dashboard for analysing Zeek Data.
+
+Keeping this project simple and broken up into three parts should help both Zeek newcomers and those with more experience get up and running quickly. Working from these base images it would be an easy task to add other packages, and extend the dashboard to suit your own environment or use case.
 
 A two part article is available that goes into more detail about the project and getting started.
 
