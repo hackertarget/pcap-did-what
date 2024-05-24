@@ -32,18 +32,20 @@ The project is structured to use Docker containers for easy setup and portabilit
 - **docker-compose.yml**: Found in `./pcap-did-what/grafana-docker/docker-compose.yml`, this Docker Compose file sets up the Grafana container, configuring it to use a custom SQLite datasource and including volumes for persistent storage and configuration.
 - **dashboard.yml**: Located at `./pcap-did-what/grafana-docker/dashboards/dashboard.yml`, this configuration file specifies the dashboard provider settings for Grafana.
 - **datasource.yml**: Found in `./pcap-did-what/grafana-docker/datasources/datasource.yml`, this file configures Grafana to use an SQLite database as the data source, pointing to the Zeek logs stored in SQLite format.
+- **GeoLite2-ASN.mmdb**: Place in `./pcap-did-what/zeek-docker/` - required file needed to be downloaded from MaxMind.
+- **GeoLite2-City.mmdb**: Another required file from MaxMind. Register Free and Download file to `zeek-docker`.
 
 ## Usage
 
 To get started with this setup, ensure you have Docker and Docker Compose installed on your system. 
 
-You will also need the MaxMind GeoIP and ASN databases, this requires registration (free) and a download of the two files.
+**Requirement** - You will need the MaxMind GeoIP and ASN databases, these require registration (free) and a download of the two files from MaxMind. Place in `zeek-docker`.
 
 Follow these steps to deploy the environment:
 
 1. **Clone this repository**
 
-```git clone https://github.com/yourusername/pcap-did-what.git```
+```git clone https://github.com/hackertarget/pcap-did-what.git```
 
 2. **Build Zeek Docker Image**
 
